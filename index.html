@@ -81,7 +81,7 @@
         }
     </style>
 </head>
-<body class="py-10 flex justify-center min-h-screen">
+<body class="bg-gray-100 md:py-10 flex justify-center min-h-screen">
 
     <!-- Botão de Download/Imprimir -->
     <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
@@ -90,138 +90,153 @@
         </button>
     </div>
 
-    <!-- Container do Currículo (Grade Exata A4) -->
-    <div class="page-container bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-[210mm] min-h-[297mm] h-[297mm] relative text-sm">
+    <!-- Container do Currículo (Grade Exata A4 no Desktop, Fluido no Mobile) -->
+    <div class="page-container bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-[210mm] md:min-h-[297mm] md:h-[297mm] h-auto min-h-screen relative text-sm md:rounded-lg">
         
+        <!-- Cabeçalho Exclusivo para Mobile (Garante impacto visual imediato ao carregar no telemóvel) -->
+        <header class="block md:hidden w-full bg-slate-900 text-center p-6 border-b border-slate-800">
+            <h1 class="text-3xl font-poppins font-bold text-white tracking-tight uppercase mb-1">YOGA MAYA</h1>
+            <h2 class="text-xs font-semibold accent-color tracking-wider uppercase">Senior Designer | Art Direction | UX/UI</h2>
+        </header>
+
         <!-- Coluna Esquerda (Barra Lateral) -->
         <aside class="sidebar bg-slate-900 text-slate-300 w-full md:w-[32%] flex flex-col p-5 print:bg-slate-900 print:text-slate-300">
             
-            <!-- Foto de Perfil Otimizada com Escala Ultra Ampliada e Margem Inferior -->
-            <div class="flex justify-center mb-12 mt-4">
-                <div class="w-36 h-36 rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center relative">
+            <!-- Foto de Perfil Otimizada (Fluida para Mobile e Imponente no Desktop) -->
+            <div class="flex justify-center mb-6 md:mb-12 mt-4">
+                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center relative">
                     <!-- Iniciais YM centralizadas no fundo como carregamento -->
-                    <span class="absolute font-poppins font-bold text-5xl text-slate-500 select-none">YM</span>
-                    <!-- Imagem oficial apontando para o ficheiro correto do seu GitHub -->
+                    <span class="absolute font-poppins font-bold text-4xl md:text-5xl text-slate-500 select-none">YM</span>
+                    <!-- Imagem oficial apontando para o ficheiro do seu GitHub -->
                     <img src="044.jfif" alt="Yoga Maya" class="absolute inset-0 w-full h-full object-cover rounded-full bg-slate-800 z-10" onerror="this.style.display='none';">
                 </div>
             </div>
 
-            <!-- Contato -->
-            <div class="mb-5">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Contacto</h3>
-                <ul class="space-y-1 text-[10px] leading-relaxed">
-                    <li class="flex items-start gap-2">
-                        <i class="fas fa-map-marker-alt mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <span>São Paulo, SP</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fas fa-phone mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <span>+55 (11) 96717-2873</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fas fa-envelope mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="mailto:yoga.viana@gmail.com" class="hover:text-white transition">yoga.viana@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
+            <!-- Bloco de Contacto & Links (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6 mb-5">
+                <!-- Contato -->
+                <div class="mb-0 md:mb-5">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Contacto</h3>
+                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <span>São Paulo, SP</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-phone mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <span>+55 (11) 96717-2873</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-envelope mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="mailto:yoga.viana@gmail.com" class="hover:text-white transition">yoga.viana@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- Links -->
-            <div class="mb-5">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Links</h3>
-                <ul class="space-y-1 text-[10px] leading-relaxed">
-                    <li class="flex items-start gap-2">
-                        <i class="fab fa-behance mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="https://be.net/yogamaya" target="_blank" class="hover:text-white transition">be.net/yogamaya</a>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fas fa-play mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="https://drive.google.com/drive/folders/1cFPJHXbzYg8LeaIXjd-24lKdMRQiMGJJ?usp=sharing" target="_blank" class="hover:text-white transition">Vídeos (Motion)</a>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fab fa-github mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="https://github.com/yogamaya69" target="_blank" class="hover:text-white transition">github.com/yogamaya69</a>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fab fa-linkedin-in mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="https://linkedin.com/in/yoga-maya-5254a3b4/" target="_blank" class="hover:text-white transition">in/yoga-maya</a>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fas fa-id-card mt-0.5 text-slate-400 w-3 text-center"></i>
-                        <a href="http://lattes.cnpq.br/6515144968487356" target="_blank" class="hover:text-white transition">Currículo Lattes</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Especialidades -->
-            <div class="mb-5">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Especialidades</h3>
-                <div class="flex flex-wrap gap-1">
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Branding</span>
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Art Direction</span>
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">UI/UX</span>
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Motion</span>
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Video Editing</span>
-                    <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Creative Strategy</span>
+                <!-- Links -->
+                <div class="mb-0 md:mb-5">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Links</h3>
+                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <i class="fab fa-behance mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="https://be.net/yogamaya" target="_blank" class="hover:text-white transition">be.net/yogamaya</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-play mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="https://drive.google.com/drive/folders/1cFPJHXbzYg8LeaIXjd-24lKdMRQiMGJJ?usp=sharing" target="_blank" class="hover:text-white transition">Vídeos (Motion)</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fab fa-github mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="https://github.com/yogamaya69" target="_blank" class="hover:text-white transition">github.com/yogamaya69</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fab fa-linkedin-in mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="https://linkedin.com/in/yoga-maya-5254a3b4/" target="_blank" class="hover:text-white transition">in/yoga-maya</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-id-card mt-0.5 text-slate-400 w-3 text-center"></i>
+                            <a href="http://lattes.cnpq.br/6515144968487356" target="_blank" class="hover:text-white transition">Currículo Lattes</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Softwares -->
-            <div class="mb-5">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Software & IA</h3>
-                <ul class="space-y-1 text-[10px] leading-relaxed">
-                    <li><span class="text-white font-medium">Design:</span> Figma, Illustrator, Photoshop, InDesign</li>
-                    <li><span class="text-white font-medium">Vídeo:</span> After Effects, Premiere</li>
-                    <li><span class="text-white font-medium">IA:</span> Firefly, Gemini, Midjourney</li>
-                </ul>
-            </div>
+            <!-- Bloco de Especialidades & Softwares (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6 mb-5">
+                <!-- Especialidades -->
+                <div class="mb-0 md:mb-5">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Especialidades</h3>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Branding</span>
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Art Direction</span>
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">UI/UX</span>
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Motion</span>
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Video Editing</span>
+                        <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Creative Strategy</span>
+                    </div>
+                </div>
 
-            <!-- Formação & Prémios -->
-            <div class="mb-5">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Formação & Prémios</h3>
-                <div class="space-y-2.5">
-                    <div>
-                        <h4 class="text-[10px] font-semibold text-white leading-tight">Especialização em Design de Interação (CESAR)</h4>
-                        <p class="text-[8.5px] text-slate-400 mt-0.5">2022 – Atual</p>
-                    </div>
-                    <div>
-                        <h4 class="text-[10px] font-semibold text-white leading-tight">Graduação em Design e Comunicação (UFPE)</h4>
-                        <p class="text-[8.5px] text-slate-400 mt-0.5">2010 – 2017</p>
-                    </div>
-                    <div class="bg-slate-800 p-1.5 rounded border border-slate-700">
-                        <a href="https://canalciencia.ibict.br/noticias/jogo-trilhas-do-conhecimento-do-canal-ciencia-vence-premio-de-melhor-serius-game-no-congresso-sbgames/" target="_blank" class="group block">
-                            <h4 class="text-[9.5px] font-medium text-white group-hover:text-orange-400 transition leading-tight mb-0.5 flex items-center gap-1">
-                                Vencedor: Melhor Serious Game - SBGames (2023)
-                                <i class="fas fa-external-link-alt text-[7px] text-slate-500 group-hover:text-orange-400 transition"></i>
-                            </h4>
-                        </a>
-                        <p class="text-[8.5px] text-slate-400">Jogo: "Trilhas do Conhecimento" (SBC)</p>
-                    </div>
+                <!-- Softwares -->
+                <div class="mb-0 md:mb-5">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Software & IA</h3>
+                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                        <li><span class="text-white font-medium">Design:</span> Figma, Illustrator, Photoshop, InDesign</li>
+                        <li><span class="text-white font-medium">Vídeo:</span> After Effects, Premiere</li>
+                        <li><span class="text-white font-medium">IA:</span> Firefly, Gemini, Midjourney</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Idiomas -->
-            <div class="mb-4">
-                <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Idiomas</h3>
-                <ul class="space-y-1.5 text-[10px]">
-                    <li>
-                        <div class="flex justify-between mb-0.5">
-                            <span class="font-medium text-white">Inglês</span>
-                            <span class="text-slate-400 text-[8.5px]">Intermediário</span>
+            <!-- Bloco de Formação & Idiomas (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6">
+                <!-- Formação & Prémios -->
+                <div class="mb-0 md:mb-5">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Formação & Prémios</h3>
+                    <div class="space-y-2.5">
+                        <div>
+                            <h4 class="text-[10px] font-semibold text-white leading-tight">Especialização em Design de Interação (CESAR)</h4>
+                            <p class="text-[8.5px] text-slate-400 mt-0.5">2022 – Atual</p>
                         </div>
-                        <div class="w-full bg-slate-700 h-1 rounded-full overflow-hidden">
-                            <div class="bg-accent h-full w-3/5"></div>
+                        <div>
+                            <h4 class="text-[10px] font-semibold text-white leading-tight">Graduação em Design e Comunicação (UFPE)</h4>
+                            <p class="text-[8.5px] text-slate-400 mt-0.5">2010 – 2017</p>
                         </div>
-                    </li>
-                    <li>
-                        <div class="flex justify-between mb-0.5">
-                            <span class="font-medium text-white">Espanhol</span>
-                            <span class="text-slate-400 text-[8.5px]">Intermediário</span>
+                        <div class="bg-slate-800 p-1.5 rounded border border-slate-700">
+                            <a href="https://canalciencia.ibict.br/noticias/jogo-trilhas-do-conhecimento-do-canal-ciencia-vence-premio-de-melhor-serius-game-no-congresso-sbgames/" target="_blank" class="group block">
+                                <h4 class="text-[9.5px] font-medium text-white group-hover:text-orange-400 transition leading-tight mb-0.5 flex items-center gap-1">
+                                    Vencedor: Melhor Serious Game - SBGames (2023)
+                                    <i class="fas fa-external-link-alt text-[7px] text-slate-500 group-hover:text-orange-400 transition"></i>
+                                </h4>
+                            </a>
+                            <p class="text-[8.5px] text-slate-400">Jogo: "Trilhas do Conhecimento" (SBC)</p>
                         </div>
-                        <div class="w-full bg-slate-700 h-1 rounded-full overflow-hidden">
-                            <div class="bg-accent h-full w-3/5"></div>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Idiomas</h3>
+                    <ul class="space-y-1.5 text-[10px]">
+                        <li>
+                            <div class="flex justify-between mb-0.5">
+                                <span class="font-medium text-white">Inglês</span>
+                                <span class="text-slate-400 text-[8.5px]">Intermediário</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1 rounded-full overflow-hidden">
+                                <div class="bg-accent h-full w-3/5"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex justify-between mb-0.5">
+                                <span class="font-medium text-white">Espanhol</span>
+                                <span class="text-slate-400 text-[8.5px]">Intermediário</span>
+                            </div>
+                            <div class="w-full bg-slate-700 h-1 rounded-full overflow-hidden">
+                                <div class="bg-accent h-full w-3/5"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </aside>
 
@@ -229,13 +244,13 @@
         <main class="w-full md:w-[68%] p-6 md:p-8 flex flex-col justify-between">
             
             <div class="flex flex-col h-full justify-between">
-                <!-- Cabeçalho Principal -->
-                <header class="mb-4">
+                <!-- Cabeçalho Principal (Oculto no Mobile, Visível no Desktop) -->
+                <header class="hidden md:block mb-4">
                     <h1 class="text-3xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-0.5">YOGA MAYA</h1>
                     <h2 class="text-[10px] md:text-xs font-semibold accent-color tracking-wider uppercase whitespace-nowrap">Senior Designer | Art Direction | UX/UI</h2>
                 </header>
 
-                <!-- Resumo Profissional Rediagramado com Destaque Editorial e Mais Altura -->
+                <!-- Resumo Profissional Rediagramado com Destaque Editorial -->
                 <section class="mb-5 border-l-2 border-accent pl-4 py-1.5 text-left">
                     <p class="text-slate-750 leading-relaxed text-[11.5px] md:text-[12px] font-poppins font-normal">
                         Designer multidisciplinar com mais de 12 anos de experiência em direção de arte, UX/UI, motion e comunicação visual. Experiência em campanhas digitais, projetos institucionais, serious games e construção de identidade visual para marcas e produtos digitais. Atuação estratégica unindo criatividade, experiência do utilizador e tecnologia, incluindo fluxos criativos com IA aplicada ao design.
