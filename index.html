@@ -43,7 +43,7 @@
             }
             html, body {
                 width: 210mm !important;
-                height: 297mm !important;
+                height: 100% !important;
                 margin: 0 !important;
                 padding: 0 !important;
                 background-color: white !important;
@@ -56,7 +56,7 @@
             }
             .page-container {
                 width: 210mm !important;
-                height: 297mm !important;
+                height: 100vh !important; /* Adapta-se dinamicamente à área imprimível do browser */
                 max-height: 297mm !important;
                 margin: 0 !important;
                 box-shadow: none !important;
@@ -67,7 +67,7 @@
             }
             .sidebar {
                 width: 70mm !important;
-                height: 297mm !important;
+                height: 100% !important;
                 box-sizing: border-box !important;
                 background-color: #0f172a !important; /* Força cor de fundo na impressão */
                 -webkit-print-color-adjust: exact !important;
@@ -75,7 +75,7 @@
             }
             main {
                 width: 140mm !important;
-                height: 297mm !important;
+                height: 100% !important;
                 box-sizing: border-box !important;
             }
         }
@@ -102,7 +102,7 @@
                     <!-- Iniciais YM centralizadas no fundo como carregamento -->
                     <span class="absolute font-poppins font-bold text-2xl text-slate-500 select-none">YM</span>
                     <!-- Imagem renderizada por cima -->
-                    <img src="044.png" alt="Yoga Maya" class="w-full h-full object-cover relative z-10 rounded-full" onerror="this.style.opacity='0';">
+                    <img src="1774905179601.jfif" alt="Yoga Maya" class="absolute inset-0 w-full h-full object-cover rounded-full bg-slate-800" onerror="this.style.display='none';">
                 </div>
             </div>
 
@@ -226,29 +226,29 @@
         </aside>
 
         <!-- Coluna Direita (Conteúdo Principal) -->
-        <main class="w-full md:w-[68%] p-5 md:p-6 print:p-5 flex flex-col justify-between">
+        <main class="w-full md:w-[68%] p-6 md:p-8 flex flex-col justify-between">
             
-            <div>
+            <div class="flex flex-col h-full justify-between">
                 <!-- Cabeçalho Principal -->
-                <header class="mb-3">
-                    <h1 class="text-2xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-0.5">YOGA MAYA</h1>
+                <header class="mb-4">
+                    <h1 class="text-3xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-0.5">YOGA MAYA</h1>
                     <h2 class="text-[10px] md:text-xs font-semibold accent-color tracking-wider uppercase whitespace-nowrap">Senior Designer | Art Direction | UX/UI</h2>
                 </header>
 
-                <!-- Resumo Profissional -->
-                <section class="mb-4 text-justify">
-                    <p class="text-slate-600 leading-snug text-left text-[10px]">
+                <!-- Resumo Profissional Rediagramado com Destaque Editorial e Mais Altura -->
+                <section class="mb-5 border-l-2 border-accent pl-4 py-1.5 text-left">
+                    <p class="text-slate-750 leading-relaxed text-[11.5px] md:text-[12px] font-medium italic">
                         Designer multidisciplinar com mais de 12 anos de experiência em branding, direção de arte, UX/UI, motion e comunicação visual. Experiência em campanhas digitais, projetos institucionais, serious games e construção de identidade visual para marcas e produtos digitais. Atuação estratégica unindo criatividade, experiência do usuário e tecnologia, incluindo fluxos criativos com IA aplicada ao design.
                     </p>
                 </section>
 
                 <!-- Experiência Profissional -->
-                <section>
-                    <h3 class="text-xs font-poppins font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2 border-b border-slate-200 pb-1">
+                <section class="flex-grow flex flex-col justify-between">
+                    <h3 class="text-xs font-poppins font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2 border-b border-slate-200 pb-1">
                         <i class="fas fa-briefcase text-[10px] accent-color"></i> Experiência Profissional
                     </h3>
                     
-                    <div class="border-l border-slate-200 ml-1.5 pl-4 space-y-3.5 relative">
+                    <div class="border-l border-slate-200 ml-1.5 pl-4 space-y-4 relative flex-grow flex flex-col justify-between">
                         
                         <!-- Experiência 1 -->
                         <div class="relative">
@@ -289,7 +289,33 @@
                             </p>
                         </div>
 
-                        <!-- Experiência 4 -->
+                        <!-- Experiência 4 (KOMMU) -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
+                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2019 – 2020</span>
+                            </div>
+                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">KOMMU - Comunicação Inteligente <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Tempo Integral</span></h5>
+                            <p class="text-slate-600 text-[9.5px] leading-snug text-left">
+                                Liderança de projetos de comunicação corporativa, marketing digital e social media para o setor de saúde. Coordenação criativa focada em reforçar a identidade visual de marcas e gerar campanhas éticas de alta clareza de público.
+                            </p>
+                        </div>
+
+                        <!-- Experiência 5 (WIBOX) -->
+                        <div class="relative">
+                            <div class="timeline-dot"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
+                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2018 – 2018</span>
+                            </div>
+                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Wibox <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Tempo Integral</span></h5>
+                            <p class="text-slate-600 text-[9.5px] leading-snug text-left">
+                                Atuação multidisciplinar cobrindo direção de arte publicitária, consultorias em estratégias visuais de branding corporativo, ilustrações autorais e design estrutural de interfaces digitais para novas experiências web e mobile.
+                            </p>
+                        </div>
+
+                        <!-- Experiência 6 -->
                         <div class="relative">
                             <div class="timeline-dot"></div>
                             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
@@ -302,7 +328,7 @@
                             </p>
                         </div>
 
-                        <!-- Experiência 5 -->
+                        <!-- Experiência 7 -->
                         <div class="relative">
                             <div class="timeline-dot"></div>
                             <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
