@@ -26,7 +26,7 @@
         .timeline-dot {
             position: absolute;
             left: -21px;
-            top: 5px;
+            top: 6px;
             width: 8px;
             height: 8px;
             border-radius: 50%;
@@ -35,7 +35,7 @@
             box-shadow: 0 0 0 2px #e05d3a;
         }
 
-        /* CONFIGURAÇÕES DE IMPRESSÃO PROFISSIONAIS PARA 1 PÁGINA A4 */
+        /* CONFIGURAÇÕES DE IMPRESSÃO PROFISSIONAIS PARA 1 PÁGINA A4 COM OVERRIDES ESTRITOS */
         @media print {
             @page {
                 size: A4;
@@ -54,28 +54,62 @@
             .no-print {
                 display: none !important;
             }
+            /* Força layout Desktop (lado a lado) na impressão, ignorando media queries de largura de tela */
             .page-container {
                 width: 210mm !important;
                 height: 297mm !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 display: flex !important;
-                flex-direction: row !important; /* Garante que a barra lateral e o conteúdo fiquem lado a lado */
+                flex-direction: row !important; /* Garante lado a lado */
                 overflow: hidden !important;
                 box-sizing: border-box !important;
             }
+            /* Força a barra lateral a manter a largura correta de 70mm */
             .sidebar {
                 width: 70mm !important;
                 height: 297mm !important;
+                display: flex !important;
+                flex-direction: column !important;
                 box-sizing: border-box !important;
                 background-color: #0f172a !important; /* Força cor de fundo na impressão */
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
+                padding: 18px !important;
             }
+            /* Desativa os grids responsivos mobile do Tailwind para manter a lista vertical simples */
+            .sidebar .grid {
+                display: block !important;
+            }
+            .sidebar .grid > div {
+                margin-bottom: 1.25rem !important;
+                width: 100% !important;
+            }
+            /* Força a coluna principal a ocupar os 140mm restantes */
             main {
                 width: 140mm !important;
                 height: 297mm !important;
+                display: flex !important;
+                flex-direction: column !important;
                 box-sizing: border-box !important;
+                padding: 24px !important;
+            }
+            /* Garante que o cabeçalho mobile fica oculto na impressão */
+            header.block {
+                display: none !important;
+            }
+            /* Garante que o cabeçalho de desktop fica visível na impressão */
+            header.hidden {
+                display: block !important;
+            }
+            /* Força o tamanho correto da foto de perfil na impressão */
+            .sidebar .rounded-full {
+                width: 32mm !important;
+                height: 32mm !important;
+            }
+            /* Força o tamanho do texto das iniciais se a foto falhar */
+            .sidebar .rounded-full span {
+                font-size: 2.25rem !important;
             }
         }
     </style>
