@@ -43,7 +43,7 @@
             }
             html, body {
                 width: 210mm !important;
-                height: 100% !important;
+                height: 297mm !important;
                 margin: 0 !important;
                 padding: 0 !important;
                 background-color: white !important;
@@ -56,8 +56,7 @@
             }
             .page-container {
                 width: 210mm !important;
-                height: 100vh !important; /* Adapta-se dinamicamente à área imprimível do browser */
-                max-height: 297mm !important;
+                height: 297mm !important;
                 margin: 0 !important;
                 box-shadow: none !important;
                 display: flex !important;
@@ -67,7 +66,7 @@
             }
             .sidebar {
                 width: 70mm !important;
-                height: 100% !important;
+                height: 297mm !important;
                 box-sizing: border-box !important;
                 background-color: #0f172a !important; /* Força cor de fundo na impressão */
                 -webkit-print-color-adjust: exact !important;
@@ -75,7 +74,7 @@
             }
             main {
                 width: 140mm !important;
-                height: 100% !important;
+                height: 297mm !important;
                 box-sizing: border-box !important;
             }
         }
@@ -93,18 +92,18 @@
     <!-- Container do Currículo (Grade Exata A4 no Desktop, Fluido no Mobile) -->
     <div class="page-container bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-[210mm] md:min-h-[297mm] md:h-[297mm] h-auto min-h-screen relative text-sm md:rounded-lg">
         
-        <!-- Cabeçalho Exclusivo para Mobile (Garante impacto visual imediato ao carregar no telemóvel) -->
+        <!-- Cabeçalho Exclusivo para Mobile -->
         <header class="block md:hidden w-full bg-slate-900 text-center p-6 border-b border-slate-800">
             <h1 class="text-3xl font-poppins font-bold text-white tracking-tight uppercase mb-1">YOGA MAYA</h1>
             <h2 class="text-xs font-semibold accent-color tracking-wider uppercase">Senior Designer | Art Direction | UX/UI</h2>
         </header>
 
         <!-- Coluna Esquerda (Barra Lateral) -->
-        <aside class="sidebar bg-slate-900 text-slate-300 w-full md:w-[32%] flex flex-col p-5 print:bg-slate-900 print:text-slate-300">
+        <aside class="sidebar bg-slate-900 text-slate-300 w-full md:w-[32%] flex flex-col p-4 md:p-5 print:bg-slate-900 print:text-slate-300">
             
-            <!-- Foto de Perfil Otimizada (Fluida para Mobile e Imponente no Desktop) -->
-            <div class="flex justify-center mb-6 md:mb-12 mt-4">
-                <div class="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center relative">
+            <!-- Foto de Perfil Otimizada (Fluida para Mobile e Equilibrada no Desktop para A4) -->
+            <div class="flex justify-center mb-6 md:mb-8 mt-2">
+                <div class="w-28 h-28 md:w-32 md:h-32 rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center relative">
                     <!-- Iniciais YM centralizadas no fundo como carregamento -->
                     <span class="absolute font-poppins font-bold text-4xl md:text-5xl text-slate-500 select-none">YM</span>
                     <!-- Imagem oficial apontando para o ficheiro do seu GitHub -->
@@ -113,11 +112,11 @@
             </div>
 
             <!-- Bloco de Contacto & Links (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6 mb-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-4 mb-4">
                 <!-- Contato -->
-                <div class="mb-0 md:mb-5">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Contacto</h3>
-                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Contacto</h3>
+                    <ul class="space-y-1.5 text-[9.5px] leading-relaxed">
                         <li class="flex items-start gap-2">
                             <i class="fas fa-map-marker-alt mt-0.5 text-slate-400 w-3 text-center"></i>
                             <span>São Paulo, SP</span>
@@ -134,9 +133,9 @@
                 </div>
 
                 <!-- Links -->
-                <div class="mb-0 md:mb-5">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Links</h3>
-                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Links</h3>
+                    <ul class="space-y-1.5 text-[9.5px] leading-relaxed">
                         <li class="flex items-start gap-2">
                             <i class="fab fa-behance mt-0.5 text-slate-400 w-3 text-center"></i>
                             <a href="https://be.net/yogamaya" target="_blank" class="hover:text-white transition">be.net/yogamaya</a>
@@ -162,10 +161,10 @@
             </div>
 
             <!-- Bloco de Especialidades & Softwares (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6 mb-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-4 mb-4">
                 <!-- Especialidades -->
-                <div class="mb-0 md:mb-5">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Especialidades</h3>
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Especialidades</h3>
                     <div class="flex flex-wrap gap-1">
                         <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Branding</span>
                         <span class="bg-slate-800 text-[8.5px] px-1.5 py-0.5 rounded text-slate-200">Art Direction</span>
@@ -177,9 +176,9 @@
                 </div>
 
                 <!-- Softwares -->
-                <div class="mb-0 md:mb-5">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Software & IA</h3>
-                    <ul class="space-y-1 text-[10px] leading-relaxed">
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Software & IA</h3>
+                    <ul class="space-y-1.5 text-[9.5px] leading-relaxed">
                         <li><span class="text-white font-medium">Design:</span> Figma, Illustrator, Photoshop, InDesign</li>
                         <li><span class="text-white font-medium">Vídeo:</span> After Effects, Premiere</li>
                         <li><span class="text-white font-medium">IA:</span> Firefly, Gemini, Midjourney</li>
@@ -188,22 +187,22 @@
             </div>
 
             <!-- Bloco de Formação & Idiomas (Grelha de 2 Colunas no Mobile, Vertical no Desktop) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:block gap-4">
                 <!-- Formação & Prémios -->
-                <div class="mb-0 md:mb-5">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Formação & Prémios</h3>
-                    <div class="space-y-2.5">
+                <div class="mb-0 md:mb-4">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Formação & Prémios</h3>
+                    <div class="space-y-3">
                         <div>
-                            <h4 class="text-[10px] font-semibold text-white leading-tight">Especialização em Design de Interação (CESAR)</h4>
+                            <h4 class="text-[9.5px] font-semibold text-white leading-tight">Especialização em Design de Interação (CESAR)</h4>
                             <p class="text-[8.5px] text-slate-400 mt-0.5">2022 – Atual</p>
                         </div>
                         <div>
-                            <h4 class="text-[10px] font-semibold text-white leading-tight">Graduação em Design e Comunicação (UFPE)</h4>
+                            <h4 class="text-[9.5px] font-semibold text-white leading-tight">Graduação em Design e Comunicação (UFPE)</h4>
                             <p class="text-[8.5px] text-slate-400 mt-0.5">2010 – 2017</p>
                         </div>
-                        <div class="bg-slate-800 p-1.5 rounded border border-slate-700">
+                        <div class="bg-slate-800 p-2 rounded border border-slate-700">
                             <a href="https://canalciencia.ibict.br/noticias/jogo-trilhas-do-conhecimento-do-canal-ciencia-vence-premio-de-melhor-serius-game-no-congresso-sbgames/" target="_blank" class="group block">
-                                <h4 class="text-[9.5px] font-medium text-white group-hover:text-orange-400 transition leading-tight mb-0.5 flex items-center gap-1">
+                                <h4 class="text-[9px] font-medium text-white group-hover:text-orange-400 transition leading-tight mb-0.5 flex items-center gap-1">
                                     Vencedor: Melhor Serious Game - SBGames (2023)
                                     <i class="fas fa-external-link-alt text-[7px] text-slate-500 group-hover:text-orange-400 transition"></i>
                                 </h4>
@@ -214,9 +213,9 @@
                 </div>
 
                 <!-- Idiomas -->
-                <div class="mb-0 md:mb-4">
-                    <h3 class="text-white text-[11px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Idiomas</h3>
-                    <ul class="space-y-1.5 text-[10px]">
+                <div class="mb-0 md:mb-2">
+                    <h3 class="text-white text-[10.5px] uppercase tracking-widest font-semibold mb-2 border-b border-slate-700 pb-1">Idiomas</h3>
+                    <ul class="space-y-2 text-[9.5px]">
                         <li>
                             <div class="flex justify-between mb-0.5">
                                 <span class="font-medium text-white">Inglês</span>
@@ -241,138 +240,124 @@
         </aside>
 
         <!-- Coluna Direita (Conteúdo Principal) -->
-        <main class="w-full md:w-[68%] p-6 md:p-8 flex flex-col justify-between">
+        <main class="w-full md:w-[68%] p-6 md:p-7 flex flex-col justify-start gap-4">
             
-            <div class="flex flex-col h-full justify-between">
-                <!-- Cabeçalho Principal (Oculto no Mobile, Visível no Desktop) -->
-                <header class="hidden md:block mb-4">
-                    <h1 class="text-3xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-0.5">YOGA MAYA</h1>
-                    <h2 class="text-[10px] md:text-xs font-semibold accent-color tracking-wider uppercase whitespace-nowrap">Senior Designer | Art Direction | UX/UI</h2>
-                </header>
+            <!-- Cabeçalho Principal (Oculto no Mobile, Visível no Desktop) -->
+            <header class="hidden md:block">
+                <h1 class="text-3xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-0.5">YOGA MAYA</h1>
+                <h2 class="text-xs font-semibold accent-color tracking-wider uppercase whitespace-nowrap">Senior Designer | Art Direction | UX/UI</h2>
+            </header>
 
-                <!-- Resumo Profissional Rediagramado com Destaque Editorial -->
-                <section class="mb-5 border-l-2 border-accent pl-4 py-1.5 text-left">
-                    <p class="text-slate-750 leading-relaxed text-[11.5px] md:text-[12px] font-poppins font-normal">
-                        Designer multidisciplinar com mais de 12 anos de experiência em direção de arte, UX/UI, motion e comunicação visual. Experiência em campanhas digitais, projetos institucionais, serious games e construção de identidade visual para marcas e produtos digitais. Atuação estratégica unindo criatividade, experiência do utilizador e tecnologia, incluindo fluxos criativos com IA aplicada ao design.
-                    </p>
-                </section>
+            <!-- Resumo Profissional Rediagramado com Destaque Editorial -->
+            <section class="border-l-2 border-accent pl-4 py-1 text-left">
+                <p class="text-slate-750 leading-relaxed text-[11px] md:text-[11.5px] font-poppins font-normal">
+                    Designer multidisciplinar com mais de 12 anos de experiência em direção de arte, UX/UI, motion e comunicação visual. Experiência em campanhas digitais, projetos institucionais, serious games e construção de identidade visual para marcas e produtos digitais. Atuação estratégica unindo criatividade, experiência do utilizador e tecnologia, incluindo fluxos criativos com IA aplicada ao design.
+                </p>
+            </section>
 
-                <!-- Experiência Profissional -->
-                <section class="flex-grow flex flex-col justify-between">
-                    <h3 class="text-xs font-poppins font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2 border-b border-slate-200 pb-1">
-                        <i class="fas fa-briefcase text-[10px] accent-color"></i> Experiência Profissional
-                    </h3>
+            <!-- Experiência Profissional -->
+            <section class="flex flex-col justify-start">
+                <h3 class="text-xs font-poppins font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2 border-b border-slate-200 pb-1">
+                    <i class="fas fa-briefcase text-[10px] accent-color"></i> Experiência Profissional
+                </h3>
+                
+                <!-- Linha do Tempo com Distribuição Editorial Perfeita (7 Vagas no Total) -->
+                <div class="border-l border-slate-200 ml-1.5 pl-4 space-y-4 relative flex flex-col justify-start text-[9.5px]">
                     
-                    <div class="border-l border-slate-200 ml-1.5 pl-4 space-y-4 relative flex-grow flex flex-col justify-between text-[9px]">
-                        
-                        <!-- Experiência 1 -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Pleno UX/UI Designer</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2022 – 2025</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">IBICT <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Criação de interfaces (UI/UX) intuitivas, conceitos de arte e game design para serious games interativos voltados à divulgação científica nacional, promovidos pelo Canal Ciência. Foco em plataformas digitais e acessibilidade.
-                            </p>
+                    <!-- Experiência 1 (BRENTWOOD) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Senior Brand Designer</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2026 – Atual</span>
                         </div>
-
-                        <!-- Experiência 2 -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2020 – 2021</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">LEONA.AG <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Liderança no desenvolvimento de campanhas e key visuals para marcas de grande presença no mercado. Criação integrada cobrindo canais offline, suportes impressos e digitais, garantindo uma estética unificada e de alto impacto.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 3 (KOMMU) -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2019 – 2020</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">KOMMU - Comunicação Inteligente <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Coordenação criativa de projetos de comunicação, marketing digital e social media para o setor de saúde, focando no fortalecimento da identidade visual corporativa e no desenvolvimento de campanhas de alta clareza.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 4 (WIBOX) -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2018 – 2018</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Wibox <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Atuação multidisciplinar cobrindo direção de arte publicitária, consultorias em estratégias de branding corporativo, ilustrações autorais e design estrutural de interfaces digitais para novas experiências web e mobile.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 5 (PARADOX ZERO) -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2017 – 2018</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Paradox Zero <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Desenvolvimento de conceitos criativos avançados, tipografia aplicada e soluções integradas de design de comunicação para projetos digitais dinâmicos e identidades visuais institucionais.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 6 (ACCESS) -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Junior Art Director</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2017 – 2017</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Access Comunicação <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Concepção gráfica de suportes publicitários e banners. Colaboração próxima com equipas multidisciplinares (redatores e diretores de criação) desde a fase de pesquisa até à produção final das campanhas.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 7 (MANTUS) -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">UI/UX | Art Concept</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2014 – 2016</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Mantus Game Studio <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Liderança artística e conceptual em videojogos indie mobile. Responsável por desenvolver do zero a identidade estética dos projetos e estruturar interfaces de utilizador intuitivas e fluidas.
-                            </p>
-                        </div>
-
-                        <!-- Experiência 8 -->
-                        <div class="relative">
-                            <div class="timeline-dot"></div>
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
-                                <h4 class="text-[11px] font-bold text-slate-800">Designer Gráfico Júnior</h4>
-                                <span class="text-[8.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2011 – 2013</span>
-                            </div>
-                            <h5 class="text-[10px] font-semibold text-slate-500 mb-0.5">Molins Comunicação e Produções <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
-                            <p class="text-slate-600 leading-snug text-left">
-                                Desenvolvimento inicial focado na criação de suportes gráficos digitais para redes, paginação de relatórios e apoio direto à equipa interna em demandas corporativas.
-                            </p>
-                        </div>
-
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">Brentwood <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Atuação estratégica no marketing corporativo, desenvolvendo campanhas, peças digitais e institucionais, e fortalecendo o branding da marca. Liderança em direção de arte e produção de conteúdos.
+                        </p>
                     </div>
-                </section>
-            </div>
 
+                    <!-- Experiência 2 (IBICT) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Pleno UX/UI Designer</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2022 – 2025</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">IBICT <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Criação de interfaces (UI/UX) intuitivas, conceitos de arte e game design para serious games interativos voltados à divulgação científica nacional, promovidos pelo Canal Ciência. Foco em plataformas digitais e acessibilidade.
+                        </p>
+                    </div>
+
+                    <!-- Experiência 3 (KOMMU) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2019 – 2020</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">KOMMU - Comunicação Inteligente <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Coordenação criativa de projetos de comunicação, marketing digital e social media para o setor de saúde, focando no fortalecimento da identidade visual corporativa e no desenvolvimento de campanhas de alta clareza.
+                        </p>
+                    </div>
+
+                    <!-- Experiência 4 (PARADOX ZERO) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Pleno Art Director</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2017 – 2018</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">Paradox Zero <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Desenvolvimento de conceitos criativos avançados, tipografia aplicada e soluções integradas de design de comunicação para projetos digitais dinâmicos e identidades visuais institucionais.
+                        </p>
+                    </div>
+
+                    <!-- Experiência 5 (ACCESS) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Junior Art Director</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2017 – 2017</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">Access Comunicação <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Concepção gráfica de suportes publicitários e banners. Colaboração próxima com equipas multidisciplinares (redatores e diretores de criação) desde a fase de pesquisa até à produção final das campanhas.
+                        </p>
+                    </div>
+
+                    <!-- Experiência 6 (MANTUS) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">UI/UX | Art Concept</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2014 – 2016</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">Mantus Game Studio <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Liderança artística e conceitual em videojogos indie mobile. Responsável por desenvolver do zero a identidade estética dos projetos e estruturar interfaces de utilizador intuitivas e fluidas.
+                        </p>
+                    </div>
+
+                    <!-- Experiência 7 (MOLINS) -->
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-[11px] font-bold text-slate-800">Designer Gráfico Júnior</h4>
+                            <span class="text-[7.5px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">2011 – 2013</span>
+                        </div>
+                        <h5 class="text-[9.5px] font-semibold text-slate-500 mb-0.5">Molins Comunicação e Produções <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Part-time</span></h5>
+                        <p class="text-slate-600 leading-relaxed text-left">
+                            Desenvolvimento inicial focado na criação de suportes gráficos digitais para redes, paginação de relatórios e apoio direto à equipa interna em demandas corporativas.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            
         </main>
     </div>
 
