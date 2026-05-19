@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Yoga Maya - Senior Designer | Art Direction | UX/UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .accent-color { color: #e05d3a; }
+        .bg-accent { background-color: #e05d3a; }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e05d3a;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #e05d3a;
+        }
+
+        /* CONFIGURAÇÕES SUPER BLINDADAS PARA IMPRESSÃO EM 1 PÁGINA A4 */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0mm !important; /* Remove as margens do sistema */
+            }
+            html, body {
+                width: 210mm !important;
+                height: 297mm !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background-color: white !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                overflow: hidden !important; /* Corta qualquer coisa que tente criar uma 2ª página */
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-container {
+                width: 210mm !important;
+                height: 297mm !important;
+                max-height: 297mm !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                display: flex !important;
+                flex-direction: row !important;
+                overflow: hidden !important;
+            }
+            .sidebar {
+                width: 70mm !important; /* Força 1/3 da página */
+                height: 297mm !important;
+            }
+            main {
+                width: 140mm !important; /* Força 2/3 da página */
+                height: 297mm !important;
+            }
+        }
+    </style>
+</head>
+<body class="py-10 flex justify-center min-h-screen">
+
+    <div class="fixed top-4 right-4 flex gap-2 no-print z-50">
+        <button onclick="window.print()" class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition font-medium">
+            <i class="fas fa-print"></i> Salvar como PDF
+        </button>
+    </div>
+
+    <!-- Container do Currículo -->
+    <div class="page-container bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-[210mm] min-h-[297mm] relative text-sm">
+        
+        <!-- Aumentei o padding interno da barra lateral (p-6 para p-8) para dar respiro horizontal também -->
+        <aside class="sidebar bg-slate-900 text-slate-300 w-full md:w-[32%] flex flex-col p-8 print:bg-slate-900 print:text-slate-300">
+            
+            <div class="flex justify-center mb-8">
+                <div class="w-32 h-32 rounded-full border-4 border-slate-700 overflow-hidden bg-slate-800 flex items-center justify-center relative">
+                    <img src="1774905179601.jfif" alt="Yoga Maya" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl font-bold text-slate-500 hidden" style="display: none;">
+                        YM
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alterado mb-5 para mb-8, mb-2.5 para mb-4, e space-y-1.5 para space-y-3 em todas as secções -->
+            <div class="mb-8">
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Contato</h3>
+                <ul class="space-y-3 text-[11px] leading-relaxed">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <span>São Paulo, SP</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-phone mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <span>+55 (11) 96717-2873</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-envelope mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="mailto:yoga.viana@gmail.com" class="hover:text-white transition">yoga.viana@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Links</h3>
+                <ul class="space-y-3 text-[11px] leading-relaxed">
+                    <li class="flex items-start gap-3">
+                        <i class="fab fa-behance mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="https://be.net/yogamaya" target="_blank" class="hover:text-white transition">be.net/yogamaya</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-play mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="https://drive.google.com/drive/folders/1cFPJHXbzYg8LeaIXjd-24lKdMRQiMGJJ?usp=sharing" target="_blank" class="hover:text-white transition">Vídeos (Motion)</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fab fa-github mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="https://github.com/yogamaya69" target="_blank" class="hover:text-white transition">github.com/yogamaya69</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fab fa-linkedin-in mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="https://linkedin.com/in/yoga-maya-5254a3b4/" target="_blank" class="hover:text-white transition">in/yoga-maya</a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-id-card mt-0.5 text-slate-400 w-3 text-center"></i>
+                        <a href="http://lattes.cnpq.br/6515144968487356" target="_blank" class="hover:text-white transition">Currículo Lattes</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Especialidades</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">Branding</span>
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">Art Direction</span>
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">UI/UX</span>
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">Motion</span>
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">Video Editing</span>
+                    <span class="bg-slate-800 text-[10px] px-2 py-1 rounded">Creative Strategy</span>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Software & IA</h3>
+                <ul class="space-y-3 text-[11px] leading-relaxed">
+                    <li><span class="text-white font-medium">Design:</span> Figma, Illustrator, Photoshop, InDesign</li>
+                    <li><span class="text-white font-medium">Vídeo/Motion:</span> After Effects, Premiere</li>
+                    <li><span class="text-white font-medium">IA:</span> Firefly, Gemini, Midjourney</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Formação & Prêmios</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-[11px] font-medium text-white">Especialização em Design de Interação (CESAR)</h4>
+                        <p class="text-[10px] text-slate-400 mt-1">2022 – Atual</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[11px] font-medium text-white">Graduação em Design e Comunicação (UFPE)</h4>
+                        <p class="text-[10px] text-slate-400 mt-1">2010 – 2017</p>
+                    </div>
+                    <div class="bg-slate-800 p-2.5 rounded flex items-start gap-3 border border-slate-700 mt-2">
+                        <i class="fas fa-trophy text-orange-500 mt-0.5 text-[11px]"></i>
+                        <div>
+                            <a href="https://canalciencia.ibict.br/noticias/jogo-trilhas-do-conhecimento-do-canal-ciencia-vence-premio-de-melhor-serius-game-no-congresso-sbgames/" target="_blank" class="group">
+                                <h4 class="text-[11px] font-medium text-white group-hover:text-orange-400 transition mb-1 flex items-center gap-1.5">
+                                    Vencedor: Melhor Serious Game - Festival SBGames (2023)
+                                    <i class="fas fa-external-link-alt text-[9px] text-slate-500 group-hover:text-orange-400 transition"></i>
+                                </h4>
+                            </a>
+                            <p class="text-[10px] text-slate-400">Jogo: "Trilhas do Conhecimento"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xs uppercase tracking-widest font-semibold mb-4 border-b border-slate-700 pb-1.5">Idiomas</h3>
+                <ul class="space-y-3 text-[11px]">
+                    <li>
+                        <div class="flex justify-between mb-1.5">
+                            <span class="font-medium text-white">Inglês</span>
+                            <span class="text-slate-400 text-[10px]">Intermediário</span>
+                        </div>
+                        <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-accent h-full w-3/5"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex justify-between mb-1.5">
+                            <span class="font-medium text-white">Espanhol</span>
+                            <span class="text-slate-400 text-[10px]">Intermediário</span>
+                        </div>
+                        <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-accent h-full w-3/5"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="w-full md:w-[68%] p-6 md:p-8">
+            
+            <header class="mb-6">
+                <h1 class="text-4xl font-poppins font-bold text-slate-900 tracking-tight uppercase mb-1">YOGA MAYA</h1>
+                <h2 class="text-md font-medium accent-color tracking-wide uppercase whitespace-nowrap">Senior Designer | Art Direction | UX/UI</h2>
+            </header>
+
+            <section class="mb-6">
+                <p class="text-slate-600 leading-relaxed text-left text-xs">
+                    Designer multidisciplinar com mais de 12 anos de experiência em branding, direção de arte, UX/UI, motion e comunicação visual. Experiência em campanhas digitais, projetos institucionais, serious games e construção de identidade visual para marcas e produtos digitais. Atuação estratégica unindo criatividade, experiência do usuário e tecnologia, incluindo fluxos criativos com IA aplicada ao design.
+                </p>
+            </section>
+
+            <section class="mb-6">
+                <h3 class="text-xl font-poppins font-bold text-slate-900 mb-4 flex items-center gap-2 border-b border-slate-200 pb-1">
+                    <i class="fas fa-briefcase text-base accent-color"></i> Experiência Profissional
+                </h3>
+                
+                <div class="border-l-2 border-slate-200 ml-2 pl-4 space-y-4 relative">
+                    
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-base font-bold text-slate-800">Senior Brand Designer</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2026 – Atual</span>
+                        </div>
+                        <h5 class="text-sm font-medium text-slate-600 mb-1.5">Brentwood <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full time</span></h5>
+                        <p class="text-slate-600 text-xs leading-relaxed text-left">
+                            Atuação no desenvolvimento de estratégias de comunicação e marketing, criação de peças digitais e institucionais, apoio em campanhas promocionais e fortalecimento da identidade da marca. Experiência com produção de conteúdo, direção de arte, acompanhamento de redes sociais, suporte em ações comerciais e colaboração com equipes multidisciplinares para garantir alinhamento entre comunicação, branding e objetivos da empresa.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-base font-bold text-slate-800">Pleno UX/UI Designer</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2022 – 2025</span>
+                        </div>
+                        <h5 class="text-sm font-medium text-slate-600 mb-1.5">IBICT <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Meio Período</span></h5>
+                        <p class="text-slate-600 text-xs leading-relaxed text-left">
+                            Os projetos em andamento do Núcleo de Estudos em Divulgação Científica do Canal Ciência do IBICT têm como objetivo criar plataformas educacionais apoiadas por TICs, concentrando-se na divulgação da produção científica nacional. Minha contribuição como UI/UX Designer é essencial para desenvolver interfaces acessíveis e atrativas. Ao longo desse período, também estive envolvida no desenvolvimento de conceitos artísticos para os jogos, enriquecendo a experiência visual e interativa. Essa colaboração visa proporcionar uma divulgação eficaz da ciência, combinando design inovador e materiais educacionais interativos. Os projetos estão atualmente em fase de pesquisa e desenvolvimento.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-base font-bold text-slate-800">Pleno Art Director</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2020 – 2021</span>
+                        </div>
+                        <h5 class="text-sm font-medium text-slate-600 mb-1.5">LEONA.AG <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Tempo Integral</span></h5>
+                        <p class="text-slate-600 text-xs leading-relaxed text-left">
+                            Como Diretora de Arte na LEONA.AG, liderei a criação de campanhas e key visuals, gerenciando marcas de forma abrangente. Minha experiência abrange não apenas o digital, mas também materiais impressos, incluindo campanhas off. Desde o conceito até a execução final, meu foco é garantir uma abordagem coesa e impactante para as campanhas publicitárias, transmitindo a identidade visual da marca de maneira única. Além disso, meu papel envolve o gerenciamento estratégico de marcas, assegurando uma presença consistente e memorável em diversos canais.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-base font-bold text-slate-800">UI/UX | Art Concept</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2014 – 2016</span>
+                        </div>
+                        <h5 class="text-sm font-medium text-slate-600 mb-1.5">Mantus Game Studio <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Full time</span></h5>
+                        <p class="text-slate-600 text-xs leading-relaxed text-left">
+                            Como Diretora de Arte, Arte Conceitual e UI Design na Mantus Game Estúdio, tive a oportunidade de liderar projetos inovadores de jogos indie para dispositivos móveis. Ao desempenhar esses papéis multifacetados, fui responsável por guiar a visão artística, desde a concepção até a implementação final nos jogos desenvolvidos pela equipe. Minha abordagem incluiu a criação de arte conceitual para estabelecer a estética única de cada jogo, além de projetar interfaces intuitivas e envolventes para garantir uma excelente experiência de usuário.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="timeline-dot"></div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-0.5">
+                            <h4 class="text-base font-bold text-slate-800">Designer Gráfico Júnior</h4>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">2011 – 2013</span>
+                        </div>
+                        <h5 class="text-sm font-medium text-slate-600 mb-1.5">Molins Comunicação e Produções <span class="text-slate-400 font-normal ml-1 border-l border-slate-300 pl-1">• Meio período</span></h5>
+                        <p class="text-slate-600 text-xs leading-relaxed text-left">
+                            Primeira experiência profissional atuando de forma presencial no desenvolvimento de peças de mídia digital e execução de projetos focados em design gráfico.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
